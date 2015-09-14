@@ -17,12 +17,12 @@ from django.utils.translation import ugettext_lazy as _
 
 # Controls the ordering and grouping of the admin menu.
 #
-ADMIN_MENU_ORDER = (
-    ("Content", ("pages.Page", "blog.BlogPost",
-       "generic.ThreadedComment", "blog.BlogCategoryAdmin", (_("Media Library"), "fb_browse"),)),
-    ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
-    ("Users", ("auth.User", "auth.Group",)),
-)
+# ADMIN_MENU_ORDER = (
+#     ("Content", ("pages.Page", "blog.BlogPost",
+#        "generic.ThreadedComment", (_("Media Library"), "fb_browse"),)),
+#     ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
+#     ("Users", ("auth.User", "auth.Group",)),
+# )
 
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.
@@ -177,6 +177,10 @@ CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_APP
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = "/static/"
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "mysite/static"),
+]
+
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
@@ -224,6 +228,7 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.galleries",
     "mezzanine.twitter",
+    "mysite",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
 )
@@ -322,3 +327,7 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
