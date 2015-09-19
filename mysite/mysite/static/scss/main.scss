@@ -1,14 +1,44 @@
 body {
     .jumbotron-default {
-        background: url("../../images/mini-pumpkins.jpg");
+        background: url(static("images/homepage-banner.jpg"));
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 12.5em;
         h1 {
             color: #fff;
+            text-shadow: 1px 1px 1px #000;
         }
     }
-    .breadcrumb {background: rgba(255, 255, 255, 1); border: 0px solid rgba(245, 245, 245, 1); border-radius: 4px; display: block;}
+    a, a:hover {
+        color: rgba(22, 158, 115, 0.54);
+    }
+    .breadcrumb {
+        background: rgba(255, 255, 255, 1);
+        border-bottom: 1px solid rgba(245, 245, 245, 1);
+        border-radius: 4px;
+        display: block;
+    }
     .breadcrumb li {font-size: 16px;}
     .breadcrumb a {color: rgba(22, 158, 115, 0.54);}
     .breadcrumb a:hover {color: rgba(245, 91, 52, 0.74);}
     .breadcrumb>.active {color: rgba(153, 153, 153, 1);}
-    .breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\203A\00a0";}
+    .breadcrumb>li+li:before {
+        color: rgba(204, 204, 204, 1);
+        content: "\203A\00a0";
+    }
+    .panel {
+        border-radius: 0px;
+    }
+    .panel-default {
+        border: none;
+        border-right: 1px dotted #ccc;
+    }
+    .nav .nav-list>ul {
+        list-style-type: square;
+    }
+    .navbar-default {
+        background-image: none;
+    }
 }
