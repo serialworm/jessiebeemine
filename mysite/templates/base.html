@@ -68,7 +68,7 @@
 </div>
 </div>
 
-<div class="jumbotron jumbotron-default" {% block jumbotron-background %}{% endblock %}>
+<div class="jumbotron jumbotron-default {% block jumbotron-extra-class %}{% endblock %}" {% block jumbotron-background %}{% endblock %}>
     <h1>{% block title %}{% endblock %}</h1>
 </div>
 <div class="container">
@@ -102,12 +102,15 @@
     {% block left_panel %}
     <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
     {% endblock %}
+    <div class="addthis_horizontal_follow_toolbox"></div>
 </div>
 
 <div class="col-md-9 middle">
     {% block main %}{% endblock %}
+    <div class="back-to-top-container">
+        <a href="#"><span class="glyphicon glyphicon-chevron-up back-to-top"></span>Back to top</a>
+    </div>
 </div>
-
 
 </div>
 </div>

@@ -19,11 +19,14 @@
 {% editable page.title %}{{ page.title }}{% endeditable %}
 {% endblock %}
 
-{% block main %}{{ page.custompage.content | safe }}
+{% block main %}
+{{ page.custompage.content | safe }}
 {% endblock %}
 
 {% block jumbotron-background %}
     {% if page.custompage.banner %}
         style="background: url('{{ MEDIA_URL }}{{ page.custompage.banner }}') no-repeat top center fixed; background-size: 100%;"
     {% endif %}
-{% endblock%}
+{% endblock %}
+
+{% block jumbotron-extra-class %}jumbotron-expand{% endblock %}

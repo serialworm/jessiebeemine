@@ -1,0 +1,20 @@
+{% load mezzanine_tags %}
+
+{% editable_loader %}
+
+<script>
+{% if settings.GOOGLE_ANALYTICS_ID and not request.user.is_staff %}
+var _gaq = _gaq || [['_trackPageview']];
+_gaq.unshift(['_setAccount', '{{ settings.GOOGLE_ANALYTICS_ID }}']);
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+})(document, 'script');
+{% endif %}
+</script>
+
+<script type="text/javascript" async defer  data-pin-color="red" data-pin-height="28" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560709723a03660f" async="async"></script>

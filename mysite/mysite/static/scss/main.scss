@@ -1,18 +1,39 @@
+@font-face {
+    font-family: 'GreatVibes-Regular';
+    src:  url(static("fonts/GreatVibes-Regular.woff")) format("woff");
+}
+@font-face {
+    font-family: 'MyriadPro-Regular.woff';
+    src:  url(static("fonts/MyriadPro-Regular.woff")) format("woff");
+}
+@font-face {
+    font-family: 'BrandonGrotesque-Regular.woff';
+    src:  url(static("fonts/BrandonGrotesque-Regular.woff")) format("woff");
+}
+
 body {
+    font-family: "BrandonGrotesque-Regular.woff";
+    font-size: 1.7em;
+    h1, h2, h3, h4, h5 {
+        font-family: "MyriadPro-Regular";
+    }
     .jumbotron-default {
         background: url(static("images/homepage-banner.jpg"));
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        min-height: 12.5em;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        min-height: 5rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
         h1 {
             color: #fff;
-            text-shadow: 1px 1px 1px #000;
+            text-shadow: 0px 0px 3px #000;
         }
     }
-    a, a:hover {
-        color: rgba(22, 158, 115, 0.54);
+    a, a:hover, a:active, a:focus {
+        color: rgba(22, 158, 115, 0.9);
     }
     .breadcrumb {
         background: rgba(255, 255, 255, 1);
@@ -30,6 +51,7 @@ body {
     }
     .panel {
         border-radius: 0px;
+        box-shadow: none !important;
     }
     .panel-default {
         border: none;
@@ -37,8 +59,232 @@ body {
     }
     .nav .nav-list>ul {
         list-style-type: square;
+        li {
+            font-size: 1.5em;
+        }
+    }
+    .nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: underline;
+        background: none;
     }
     .navbar-default {
         background-image: none;
     }
+    #tree-menu-home {
+        display: none;
+    }
+    .tree .active > a {
+        background: none;
+    }
+    .middle {
+        font-size: 1.5rem;
+        p {
+            margin: 15px 0 15px 0px;
+        }
+        img {
+            max-width: 100%;
+        }
+        .performance-facts {
+            font-family: sans-serif;
+            border: 1px solid black;
+            margin: 20px;
+            float: left;
+            max-width: 600px;
+            padding: 0.5rem;
+            table {
+                border-collapse: collapse;
+            }
+        }
+        .performance-facts__title {
+            font-weight: bold;
+            font-size: 2rem;
+            margin: 0 0 0.25rem 0;
+        }
+        .performance-facts__header {
+            border-bottom: 10px solid rgba(22, 158, 115, 0.9);
+            padding: 0 0 0.25rem 0;
+            margin: 0 0 0.5rem 0;
+            p {
+                margin: 0;
+            }
+        }
+        .performance-facts__table {
+            width: 100%;
+            line-height: 22px;
+            thead tr {
+                th, td {
+                    border: 0;
+                }
+            }
+          th, td {
+            font-weight: normal;
+            text-align: left;
+            padding: 0.25rem 0;
+            border-top: 1px solid black; 
+            white-space: nowrap;
+          }
+          td {
+            &:last-child {
+              text-align: right;
+            }
+          }
+          .blank-cell {
+            width: 1rem;
+            border-top: 0;
+          }
+          .thick-row {
+            th, td {
+              border-top-width: 5px;
+            }
+          }
+        }
+        .small-info {
+          font-size: 0.7rem;
+        }
+
+        .performance-facts__table--small {
+            @extend .performance-facts__table;
+            border-bottom: 1px solid #999;
+            margin: 0 0 0.5rem 0;
+            thead {
+                tr {
+                    border-bottom: 1px solid rgba(22, 158, 115, 0.9); 
+                }
+            }
+            td {
+                &:last-child {
+                    text-align: left;
+                }
+            }
+            th, td {
+                border: 0;
+                padding: 0;
+            }
+        }
+        .performance-facts__table--grid {
+          @extend .performance-facts__table;
+          margin: 0 0 0.5rem 0;
+          td {
+            &:last-child {
+              text-align: left;
+              &::before {
+                content: "•";
+                font-weight: bold;
+                margin: 0 0.25rem 0 0;
+              }
+            }
+          }
+        }
+        .text-center {
+            text-align: center;
+        }
+        .thick-end {
+           border-bottom: 10px solid rgba(22, 158, 115, 0.9);
+        }
+        .thin-end {
+            border-bottom: 1px solid rgba(22, 158, 115, 0.9);
+        }
+    }
+    .home-content {
+        margin-bottom: 15px;
+    }
+    .signature {
+        font-family: "GreatVibes-Regular";
+        font-size: 2em;
+    }
+    div.prep {
+        max-width: 600px;
+        border-top: 1px dotted black;
+        div {
+            max-width: 450px;
+            margin: 0 auto;
+            ul {
+                li {
+                    display: inline-block;
+                    padding: 10px;
+                    div {
+                        text-align: center;
+                        text-transform: uppercase;
+                        &.label {
+                            font-weight: bold;
+                            font-size: 1.2em;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .back-to-top-container {
+        float: right;
+        .back-to-top {
+            margin-right: 10px;
+        }
+    }
+    footer {
+        background-image: url(static("images/honeycomb.png"));
+        background-position: 20px 23px;
+    }
+    @media (min-width:320px) {
+        .jumbotron-expand {
+            background-size: 200% !important;
+        }
+        .jumbotron {
+            background-size: 100%;
+            min-height: 4em;
+            h1 {
+                display: none;
+            }
+        }
+    }
+    @media (min-width:481px) { 
+        .jumbotron-expand {
+            background-size: 200% !important;
+        }
+        .jumbotron {
+            min-height: 6em;
+            background-size: 100%;
+            h1 {
+                display: none;
+            }
+        }
+    }
+    @media (min-width:641px) { 
+        .navbar-nav {
+            display: none;
+        }
+        .jumbotron-expand {
+            background-size: 100% !important;
+        }
+        .jumbotron {
+            min-height: 9.5em;
+            h1 {
+                display: block;
+            }
+        }
+        .navbar-form.navbar-right {
+            max-width: 25em;
+        }
+        .middle p {
+            width: 600px;
+        }
+    }
+    @media (min-width:961px) { 
+        .navbar-nav {
+            display: none;
+        }
+        .jumbotron-expand {
+            background-size: 100% !important;
+        }
+        .jumbotron {
+            min-height: 12.5em;
+            h1 {
+                display: block;
+            }
+        }
+        .middle p {
+            width: 600px;
+        }
+    }
 }
+
