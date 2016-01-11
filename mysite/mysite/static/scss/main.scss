@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'GreatVibes-Regular';
-    src:  url(static("fonts/GreatVibes-Regular.woff")) format("woff");
+    src:  url(static('fonts/GreatVibes-Regular.woff')) format('woff');
 }
 @font-face {
-    font-family: 'MyriadPro-Regular.woff';
-    src:  url(static("fonts/MyriadPro-Regular.woff")) format("woff");
+    font-family: 'MyriadPro-Regular';
+    src:  url(static('fonts/MyriadPro-Regular.woff')) format('woff');
 }
 @font-face {
-    font-family: 'BrandonGrotesque-Regular.woff';
-    src:  url(static("fonts/BrandonGrotesque-Regular.woff")) format("woff");
+    font-family: 'BrandonGrotesque-Regular';
+    src:  url(static('fonts/BrandonGrotesque-Regular.woff')) format('woff');
 }
 
 body {
-    font-family: "BrandonGrotesque-Regular.woff";
+    font-family: 'BrandonGrotesque-Regular';
     font-size: 1.7em;
     h1, h2, h3, h4, h5 {
         font-family: "MyriadPro-Regular";
