@@ -6,6 +6,7 @@ from django.contrib import admin
 
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
+from . import views
 
 
 admin.autodiscover()
@@ -52,6 +53,7 @@ urlpatterns += patterns('',
     # should be used if you want to customize the homepage's template.
 
     url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
+    url(r'^join-my-newsletter/', views.join_my_newsletter, name='newsletter'),
 
     # HOMEPAGE FOR A BLOG-ONLY SITE
     # -----------------------------

@@ -5,3 +5,4 @@ from mezzanine.core.models import RichText
 
 class CustomPage(Page, RichText):
     banner = models.ImageField(upload_to="banners")
+    featured = models.ImageField(default="", upload_to="uploads")

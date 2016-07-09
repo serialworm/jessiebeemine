@@ -19,6 +19,14 @@
 {% editable page.title %}{{ page.title }}{% endeditable %}
 {% endblock %}
 
+{% block extra_head %}
+
+
+    {% if page.custompage.featured %}
+        <meta property="og:image" content="http://{{ request.get_host }}{{ MEDIA_URL }}{{ page.custompage.featured }}" />
+    {% endif %}
+{% endblock %}
+
 {% block main %}
 {{ page.custompage.content | safe }}
 {% endblock %}
