@@ -56,6 +56,9 @@ body {
     .panel-default {
         border: none;
         border-right: 1px dotted #ccc;
+        .nav-list {
+            margin-bottom: 10px;
+        }
     }
     .nav .nav-list>ul {
         list-style-type: square;
@@ -128,7 +131,7 @@ body {
             font-weight: normal;
             text-align: left;
             padding: 0.25rem 0;
-            border-top: 1px solid black; 
+            border-top: 1px solid black;
             white-space: nowrap;
           }
           td {
@@ -156,7 +159,7 @@ body {
             margin: 0 0 0.5rem 0;
             thead {
                 tr {
-                    border-bottom: 1px solid rgba(22, 158, 115, 0.9); 
+                    border-bottom: 1px solid rgba(22, 158, 115, 0.9);
                 }
             }
             td {
@@ -261,7 +264,7 @@ body {
             }
         }
     }
-    @media (min-width:481px) { 
+    @media (min-width:481px) {
         .jumbotron-expand {
             background-size: 200% !important;
         }
@@ -273,7 +276,7 @@ body {
             }
         }
     }
-    @media (min-width:641px) { 
+    @media (min-width:641px) {
         .navbar-nav {
             display: none;
         }
@@ -293,7 +296,7 @@ body {
             width: 600px;
         }
     }
-    @media (min-width:961px) { 
+    @media (min-width:961px) {
         .navbar-nav {
             display: none;
         }
@@ -311,4 +314,3 @@ body {
         }
     }
 }
-

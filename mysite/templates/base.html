@@ -38,6 +38,15 @@
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
 {% block extra_js %}{% endblock %}
 {% endcompress %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.3/jquery.sticky.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#left-nav").sticky({
+        topSpacing: 50,
+        bottomSpacing: 61
+    });
+  });
+</script>
 
 <!--[if lt IE 9]>
 <script src="{% static "js/html5shiv.js" %}"></script>
@@ -100,13 +109,16 @@
 
 <div class="col-md-3 left">
     {% block left_panel %}
-    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
+
+    <div class="panel panel-default tree" id="left-nav">
+        {% page_menu "pages/menus/tree.html" %}
+        <div class="hidden-xs addthis_horizontal_follow_toolbox"></div>
+    </div>
     {% endblock %}
 </div>
 
 <div class="col-md-9 middle">
     {% block main %}{% endblock %}
-    <div class="addthis_horizontal_follow_toolbox"></div>
     <div class="back-to-top-container">
         <a href="#"><span class="glyphicon glyphicon-chevron-up back-to-top"></span>Back to top</a>
     </div>
