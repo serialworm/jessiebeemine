@@ -27,6 +27,7 @@ body {
         min-height: 5rem;
         padding-bottom: 0;
         margin-bottom: 0;
+        margin: 0 auto;
         h1 {
             color: #fff;
             text-shadow: 0px 0px 3px #000;
@@ -258,10 +259,13 @@ body {
         }
         .jumbotron {
             background-size: 100%;
-            min-height: 4em;
+            min-height: 5em;
             h1 {
                 display: none;
             }
+        }
+        .sticky-wrapper {
+            display: none;
         }
     }
     @media (min-width:481px) {
@@ -269,15 +273,21 @@ body {
             background-size: 200% !important;
         }
         .jumbotron {
-            min-height: 6em;
+            min-height: 7.5em;
             background-size: 100%;
             h1 {
                 display: none;
             }
         }
+        .sticky-wrapper {
+            display: none;
+        }
     }
     @media (min-width:641px) {
         .navbar-nav {
+            display: none;
+        }
+        .sticky-wrapper {
             display: none;
         }
         .jumbotron-expand {
@@ -289,6 +299,9 @@ body {
                 display: block;
             }
         }
+        .jumbotron-default {
+            max-width: 680px !important;
+        }
         .navbar-form.navbar-right {
             max-width: 25em;
         }
@@ -298,7 +311,10 @@ body {
     }
     @media (min-width:961px) {
         .navbar-nav {
-            display: none;
+            display: none !important;
+        }
+        .sticky-wrapper {
+            display: none !important;
         }
         .jumbotron-expand {
             background-size: 100% !important;
@@ -309,8 +325,24 @@ body {
                 display: block;
             }
         }
+        .jumbotron-default {
+            max-width: 1000px !important;
+        }
         .middle p {
             width: 600px;
+        }
+    }
+    @media (min-width:991px) {
+        .sticky-wrapper {
+            display: block !important;
+        }
+    }
+    @media (min-width:1280px) {
+        .jumbotron {
+            min-height: 17em;
+        }
+        .jumbotron-default {
+            max-width: 1350px !important;
         }
     }
 }
