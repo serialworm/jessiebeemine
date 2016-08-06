@@ -92,6 +92,7 @@ body {
     }
 
     .middle {
+        max-width: 600px;
         font-size: 1.5rem;
         p {
             margin: 15px 0 15px 0px;
@@ -267,9 +268,6 @@ body {
                 display: none;
             }
         }
-        .sticky-wrapper {
-            display: none;
-        }
     }
     @media (min-width:481px) {
         .jumbotron-expand {
@@ -282,17 +280,8 @@ body {
                 display: none;
             }
         }
-        .sticky-wrapper {
-            display: none;
-        }
     }
     @media (min-width:641px) {
-        .navbar-nav {
-            display: none;
-        }
-        .sticky-wrapper {
-            display: none;
-        }
         .jumbotron-expand {
             background-size: 100% !important;
         }
@@ -308,15 +297,9 @@ body {
         .navbar-form.navbar-right {
             max-width: 25em;
         }
-        .middle p {
-            width: 600px;
-        }
     }
     @media (min-width:961px) {
         .navbar-nav {
-            display: none !important;
-        }
-        .sticky-wrapper {
             display: none !important;
         }
         .jumbotron-expand {
@@ -330,14 +313,6 @@ body {
         }
         .jumbotron-default {
             max-width: 1000px;
-        }
-        .middle p {
-            width: 600px;
-        }
-    }
-    @media (min-width:991px) {
-        .sticky-wrapper {
-            display: block !important;
         }
     }
     @media (min-width:1280px) {
